@@ -7,7 +7,7 @@ SIGNIN = (By.XPATH, "//form[@name='signIn']")
 
 
 @given('Open https://www.amazon.com')
-def open_amazon_help_page(context):
+def open_amazon_page(context):
     context.driver.get('https://www.amazon.com')
 
 
@@ -15,12 +15,10 @@ def open_amazon_help_page(context):
 def click_orders_button(context):
     amazon_orders_button = context.driver.find_element(*ORDERS)
     amazon_orders_button.click()
+    sleep(2)
 
-sleep(2)
 
 @then('Verify Sign in page opened')
 def check_page(context):
     assert 'Sign-In' in context.driver.find_element(*SIGNIN).text
-
-sleep(1)
-
+    sleep(1)
