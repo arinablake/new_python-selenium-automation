@@ -24,11 +24,11 @@ def search_input_field(context, search_text):
 def click_search_button(context):
     amazon_search_button = context.driver.find_element(*GO_BUTTON_LOCATOR)
     amazon_search_button.click()
-    sleep(1)
+    # sleep(1)
 
 
 # verify
 @then('{search_text} page is shown')
 def check_page(context, search_text):
     assert 'Cancel Items or Orders' in context.driver.find_element(*CHECK_PAGE).text
-    sleep(2)
+    # sleep(2)

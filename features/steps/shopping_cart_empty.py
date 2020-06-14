@@ -15,12 +15,12 @@ def open_amazon_help_page(context):
 def click_sc_button(context):
     amazon_sc_button = context.driver.find_element(*SC_LOCATOR)
     amazon_sc_button.click()
-    sleep(1)
+    # sleep(1)
 
 
 @then('Verify {expected} text present')
 def check_page(context, expected):
     actual = context.driver.find_element(*CHECK_PAGE).text
     assert expected in actual, f'Expected text {expected}, but got {actual}'
-    sleep(1)
+    # sleep(1)
 
