@@ -23,6 +23,7 @@ def click_blog_link(context):
 
 @when('Switch to the newly opened window')
 def switch_new_window(context):
+    context.driver.wait.until(EC.new_window_is_opened)
     new_window = context.driver.switch_to.window(context.all_windows[1])
 
 
