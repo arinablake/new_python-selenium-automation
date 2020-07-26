@@ -1,3 +1,4 @@
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -8,6 +9,7 @@ class Page:
         self.driver = driver
         self.base_url = 'https://www.amazon.com/'
         self.driver.wait = WebDriverWait(self.driver, 15)
+        self.actions = ActionChains(self.driver)
 
     def open_page(self, url=''):
         self.driver.get(self.base_url + url)

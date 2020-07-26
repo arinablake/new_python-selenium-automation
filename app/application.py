@@ -4,6 +4,7 @@ from pages.top_nav_menu import TopNavMenu
 from pages.main_page import MainPage
 from pages.results_page import ResultsPage
 from pages.hamburger_menu_page import HamburgerMenuPage
+from pages.product_page import Product
 
 class Application:
 
@@ -16,3 +17,4 @@ class Application:
         self.main_page = MainPage(self.driver)
         self.results_page = ResultsPage(self.driver)
         self.hamburger_menu_page = HamburgerMenuPage(self.driver)
+        self.product_page = Product(self.driver)
